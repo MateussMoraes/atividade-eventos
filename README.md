@@ -33,4 +33,4 @@ E enfim subir o projeto:
 Obs: para adicionar imagens é necessário colocar a imagem na pasta public dentro do projeto para funcionar.
 
 #### Exemplo do projeto
-<img alt="Exemplo do projeto" src="/public/exemplo.png"></img>
+<img alt="Exemplo do projeto" src="/public/exemploapp.png"></img>
