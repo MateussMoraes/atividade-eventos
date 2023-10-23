@@ -1,0 +1,10 @@
+.button {
+  padding: 12px 16px;
+  border: 1px solid var(--white);
+  border-radius: 4px;
+  color: var(--white);
+  background-color: var(--primary);
+  font-family: "Roboto",sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}

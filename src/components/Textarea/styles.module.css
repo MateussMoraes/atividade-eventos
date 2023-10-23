@@ -1,0 +1,4 @@
+.label {
+  border: 1px solid var(--darkGray);
+  border-radius: 3px;
+}

@@ -1,0 +1,104 @@
+{
+  "eventos": [
+    {
+      "id": 1,
+      "titulo": "Conferência de Tecnologia",
+      "local": "Centro de Convenções",
+      "dataInicial": "2023-11-10T09:00:00",
+      "dataFinal": "2023-11-12T17:00:00",
+      "descricao": "Uma conferência sobre as últimas tendências em tecnologia.",
+      "aberto": true,
+      "imagem": "imagem1.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "Workshop de Design",
+      "local": "Sala de Treinamento A",
+      "dataInicial": "2023-10-25T14:00:00",
+      "dataFinal": "2023-10-25T16:00:00",
+      "descricao": "Um workshop prático sobre design de interface de usuário.",
+      "aberto": false,
+      "imagem": "imagem2.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Festa de Aniversário da Empresa",
+      "local": "Salão de Festas",
+      "dataInicial": "2023-12-15T19:00:00",
+      "dataFinal": "2023-12-15T23:00:00",
+      "descricao": "Celebração do aniversário da empresa com comida e música.",
+      "aberto": true,
+      "imagem": "imagem3.jpg"
+    },
+    {
+      "id": 4,
+      "titulo": "Seminário de Marketing Digital",
+      "local": "Auditório B",
+      "dataInicial": "2023-11-05T10:30:00",
+      "dataFinal": "2023-11-05T15:00:00",
+      "descricao": "Um seminário abordando estratégias de marketing online.",
+      "aberto": true,
+      "imagem": "imagem4.jpg"
+    },
+    {
+      "id": 5,
+      "titulo": "Exposição de Arte Contemporânea",
+      "local": "Galeria de Arte Moderna",
+      "dataInicial": "2023-10-28T11:00:00",
+      "dataFinal": "2023-11-10T18:00:00",
+      "descricao": "Uma exposição de obras de artistas contemporâneos.",
+      "aberto": true,
+      "imagem": "imagem5.jpg"
+    },
+    {
+      "id": 6,
+      "titulo": "Workshop de Fotografia",
+      "local": "Estúdio de Fotografia X",
+      "dataInicial": "2023-11-08T16:00:00",
+      "dataFinal": "2023-11-08T18:00:00",
+      "descricao": "Aprenda técnicas avançadas de fotografia com profissionais renomados.",
+      "aberto": false,
+      "imagem": "imagem6.jpg"
+    },
+    {
+      "id": 7,
+      "titulo": "Lançamento de Produto",
+      "local": "Sala de Conferências C",
+      "dataInicial": "2023-10-30T15:00:00",
+      "dataFinal": "2023-10-30T17:00:00",
+      "descricao": "Apresentação do mais recente produto da nossa empresa.",
+      "aberto": true,
+      "imagem": "imagem7.jpg"
+    },
+    {
+      "id": 8,
+      "titulo": "Festival de Música ao Ar Livre",
+      "local": "Parque da Cidade",
+      "dataInicial": "2023-12-02T17:00:00",
+      "dataFinal": "2023-12-02T23:00:00",
+      "descricao": "Um festival com diversas bandas e comida de rua.",
+      "aberto": true,
+      "imagem": "imagem8.jpg"
+    },
+    {
+      "id": 9,
+      "titulo": "Feira de Empregos",
+      "local": "Centro de Eventos Z",
+      "dataInicial": "2023-11-18T10:00:00",
+      "dataFinal": "2023-11-18T16:00:00",
+      "descricao": "Oportunidades de carreira e networking com várias empresas.",
+      "aberto": true,
+      "imagem": "imagem9.jpg"
+    },
+    {
+      "id": 10,
+      "titulo": "Simpósio de Saúde Mental",
+      "local": "Hospital Psiquiátrico",
+      "dataInicial": "2023-10-31T14:30:00",
+      "dataFinal": "2023-10-31T17:00:00",
+      "descricao": "Discussões sobre saúde mental e bem-estar emocional.",
+      "aberto": true,
+      "imagem": "imagem10.jpg"
+    }
+  ]
+}

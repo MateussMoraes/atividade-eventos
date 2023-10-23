@@ -1,0 +1,41 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.modalContent {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 100%;
+  width: auto;
+  max-height: 600px;
+  overflow-y: scroll;
+  height: auto;
+  overflow: auto;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.btnClose {
+  cursor: pointer;
+}
+
+.title {
+  font-family: "Roboto",sans-serif;
+}

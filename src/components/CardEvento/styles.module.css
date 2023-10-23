@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--darkGray);
+  border-radius: 6px;
+  width: 20rem;
+  padding: 12px;
+}
+
+.container:hover {
+  cursor: pointer;
+  border-color: chocolate;
+}
+
+.containerTitulo {
+  height: 53px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.containerTitulo p {
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.containerInfos {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  margin-top: 1rem;
+}
+
+.containerInfosDate {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.containerAberto {
+  margin-top: .6rem;
+}
+
+.containerInfosLocal p::before {
+  content: "📍";
+  padding-right: 6px;
+}
+
+.containerInfosDate p::before {
+  content: "🗓";
+  padding-right: 6px;
+}
+
+.containerAberto p {
+  font-family: "Roboto", sans-serif;
+}
+
+.link {
+  text-decoration: none;
+}

@@ -1,0 +1,11 @@
+.tr:hover {
+  background-color: var(--focus) !important;
+}
+
+.tr:nth-child(odd) {
+  background-color: var(--lightGray);
+}
+
+.tr:nth-child(even) {
+  background-color: var(--white);
+}
