@@ -1,24 +1,14 @@
 {
   "eventos": [
     {
-      "id": 1,
       "titulo": "Conferência de Tecnologia",
       "local": "Centro de Convenções",
-      "dataInicial": "2023-11-10T09:00:00",
-      "dataFinal": "2023-11-12T17:00:00",
+      "dataInicial": "2023-11-10",
+      "dataFinal": "2023-11-12",
       "descricao": "Uma conferência sobre as últimas tendências em tecnologia.",
+      "imagem": "/luffygearfive.jpg",
       "aberto": true,
-      "imagem": "imagem1.jpg"
-    },
-    {
-      "id": 2,
-      "titulo": "Workshop de Design",
-      "local": "Sala de Treinamento A",
-      "dataInicial": "2023-10-25T14:00:00",
-      "dataFinal": "2023-10-25T16:00:00",
-      "descricao": "Um workshop prático sobre design de interface de usuário.",
-      "aberto": false,
-      "imagem": "imagem2.jpg"
+      "id": 1
     },
     {
       "id": 3,
@@ -99,6 +89,46 @@
       "descricao": "Discussões sobre saúde mental e bem-estar emocional.",
       "aberto": true,
       "imagem": "imagem10.jpg"
+    },
+    {
+      "titulo": "Evento teste",
+      "local": "IFRO",
+      "dataInicial": "2023-10-22",
+      "dataFinal": "2023-10-23",
+      "descricao": "Evento legal",
+      "imagem": "/Screenshot from 2023-10-20 14-31-50.png",
+      "aberto": true,
+      "id": 11
+    },
+    {
+      "titulo": "Teste",
+      "local": "IFRO",
+      "dataInicial": "2023-10-22",
+      "dataFinal": "2023-10-24",
+      "descricao": "dadasdasda",
+      "imagem": "/Screenshot from 2023-10-20 14-31-50.png",
+      "aberto": true,
+      "id": 12
+    },
+    {
+      "titulo": "asdadasd",
+      "local": "adsdadad",
+      "dataInicial": "2023-10-22",
+      "dataFinal": "2023-10-25",
+      "descricao": "dasdasdas",
+      "imagem": "/Screenshot from 2023-10-11 18-17-46.png",
+      "aberto": true,
+      "id": 13
+    },
+    {
+      "titulo": "Luffy no Gear Five !",
+      "local": "Wano",
+      "dataInicial": "2023-10-15",
+      "dataFinal": "2023-10-24",
+      "descricao": "Luffy desperta sua fruta lutando contra o Kaido, a criatura mais forte do mundo.",
+      "imagem": "/luffygearfive.jpg",
+      "aberto": true,
+      "id": 14
     }
   ]
 }

@@ -1,19 +1,21 @@
-import Button from "@/components/Button";
-import Container from "@/components/Container";
-import Input from "@/components/Input";
-import Label from "@/components/Label";
-import Text from "@/components/Text";
-import Textaera from "@/components/Textarea";
 import axios from "axios";
+import Button from "@/components/Button";
+import Text from "@/components/Text";
+import Container from "@/components/Container";
+import Label from "@/components/Label";
+import Input from "@/components/Input";
+import Textaera from "@/components/Textarea";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import Head from "next/head";
-import { useEffect, useRef, useState } from "react";
+import { formatarDataInput } from "@/utils/mascaras";
+import Link from "next/link";
 
-export default function CadastrarEvento() {
+export default function AtualizarEvento() {
 
-  const [message, setMessage] = useState({
-    type: "",
-    content: ""
-  });
+  let router = useRouter();
+
+  const [evento, setEvento] = useState();
 
   const [dados, setDados] = useState({
     titulo: "",
@@ -22,41 +24,39 @@ export default function CadastrarEvento() {
     dataFinal: "",
     descricao: "",
     imagem: "",
-    aberto: false
-  });
+    aberto: ""
+  })
 
-  let inputImg = useRef();
+  const [message, setMessage] = useState({
+    type: "",
+    content: ""
+  })
 
-  async function cadastrarEvento(e) {
-    e.preventDefault();
+  let id = router.query.id;
 
-    axios.post("http://localhost:3001/eventos", {
-      titulo: dados.titulo,
-      local: dados.local,
-      dataInicial: dados.dataInicial,
-      dataFinal: dados.dataFinal,
-      descricao: dados.descricao,
-      imagem: dados.imagem,
-      aberto: dados.aberto
-    })
-      .then(res => {
-        setMessage({ type: "success", content: "Evento cadastrado com sucesso" })
-        setDados({
-          titulo: "",
-          local: "",
-          dataInicial: "",
-          dataFinal: "",
-          descricao: "",
-          imagem: "",
-          aberto: false
+  useEffect(() => {
+    if (id) {
+      axios.get(`http://localhost:3001/eventos/${id}`)
+        .then(res => {
+          setEvento(res.data)
         })
-        // limpar o input de img
-        if (inputImg.current) {
-          inputImg.current.value = ""
-        }
+        .catch(error => console.log(error))
+    }
+  }, [router])
+
+  useEffect(() => {
+    if (evento) {
+      setDados({
+        titulo: evento?.titulo,
+        local: evento?.local,
+        dataInicial: formatarDataInput(evento?.dataInicial),
+        dataFinal: formatarDataInput(evento?.dataFinal),
+        descricao: evento?.descricao,
+        imagem: evento?.imagem,
+        aberto: evento?.aberto
       })
-      .catch(error => setMessage({ type: "error", content: "Erro ao cadastrar evento" }))
-  }
+    }
+  }, [evento])
 
   useEffect(() => {
     if (message) {
@@ -66,15 +66,33 @@ export default function CadastrarEvento() {
     }
   }, [message.content])
 
-  return (
+  async function atualizarEvento(e) {
+    e.preventDefault();
+    axios.put(`http://localhost:3001/eventos/${id}`, {
+      titulo: dados.titulo,
+      local: dados.local,
+      dataInicial: dados.dataInicial,
+      dataFinal: dados.dataFinal,
+      descricao: dados.descricao,
+      imagem: dados.imagem,
+      aberto: dados.aberto
+    }).then(res => {
+      setMessage({ type: "success", content: "Evento Atualizado com sucesso" })
+      setTimeout(() => {
+        router.push("/gerenciar")
+      }, 2000)
+    }).catch(error => setMessage({ type: "success", content: "Erro ao atualizar evento" }))
+  }
+
+  if (evento && dados) return (
     <>
       <Head>
-        <title>Cadastrar Evento</title>
+        <title>Atualizar Evento</title>
       </Head>
-      
-      <form onSubmit={e => cadastrarEvento(e)} style={{ display: "flex", justifyContent: "center" }}>
+
+      <form onSubmit={e => atualizarEvento(e)} style={{ display: "flex", justifyContent: "center" }}>
         <Container style={{ width: "25rem", marginTop: "2rem", gap: ".6rem" }}>
-          <Text style={{ marginBottom: "2rem" }}>Cadastrar Evento</Text>
+          <Text style={{ marginBottom: "2rem" }}>Atualizar evento</Text>
           {message.content && (
             <Text style={{ color: "white", backgroundColor: message.type == "error" ? "red" : "green", padding: "12px" }}>
               {message.content}
@@ -106,11 +124,20 @@ export default function CadastrarEvento() {
           </Container>
           <Container>
             <Label htmlFor="imagem">Imagem:</Label>
-            <Input id="imagem" type="file" ref={inputImg} onChange={e => setDados((data) => ({ ...data, imagem: "/" + e.target.files[0]?.name }))} />
+            <Input id="imagem" type="file" onChange={e => setDados((data) => ({ ...data, imagem: "/" + e.target.files[0]?.name }))} />
           </Container>
-          <Button style={{ marginTop: "1rem" }}>Cadastrar</Button>
+          <Button style={{ marginTop: "1rem" }}>Atualizar</Button>
         </Container>
       </form>
     </>
+  )
+  if (!evento) return (
+    <>
+      <Container style={{ marginLeft: "1rem", marginTop: "1rem", gap: "1rem" }}>
+        <Text>Erro ao buscar evento</Text>
+        <Link href="/">Voltar para página de eventos</Link>
+      </Container>
+    </>
+
   )
 }

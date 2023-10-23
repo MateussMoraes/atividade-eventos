@@ -29,6 +29,7 @@ export default function Home() {
             dataInicial={formatarData(evento.dataInicial)}
             dataFinal={formatarData(evento.dataFinal)}
             aberto={evento.aberto}
+            id={evento.id}
           />
         ))}
       </CardList>

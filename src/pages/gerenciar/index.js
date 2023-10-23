@@ -14,8 +14,13 @@ import ModalText from "@/components/ModalText";
 import Button from "@/components/Button";
 import Text from "@/components/Text";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function GerenciarEventos() {
+
+  let router = useRouter();
+
+  let id = router.query.id;
 
   const [eventos, setEventos] = useState([]);
 
@@ -107,6 +112,15 @@ export default function GerenciarEventos() {
                       setEvento(evento)
                       setModalDeletar(true)
                     }}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <Image
+                    src={"/edit.svg"}
+                    width={25}
+                    height={25}
+                    alt="Imagem de um lapis escrevendo no papel"
+                    title="Atualizar evento"
+                    onClick={() => router.push(`/gerenciar/atualizar/${evento.id}`)}
                     style={{ cursor: "pointer" }}
                   />
                 </Td>
