@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
       <div className={styles.containerLogoTitulo}>
         <Link href={"/"}>
           <Image
-            src={"/logoIF.png"}
+            src={"/gato.png"}
             alt={'Logo do IFRO'}
             width={75}
             height={75}
