@@ -43,15 +43,6 @@ export default function EventoPorID() {
       </div>
     </>
   )
-  if (!evento) return (
-    <>
-      <Container style={{ marginLeft: "1rem", marginTop: "1rem", gap: "1rem" }}>
-        <Text>Erro ao buscar evento</Text>
-        <Link href="/">Voltar para página de eventos</Link>
-      </Container>
-    </>
-
-  )
 }
 
 

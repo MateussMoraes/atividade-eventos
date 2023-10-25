@@ -1,26 +1,6 @@
 {
   "eventos": [
     {
-      "titulo": "Conferência de Tecnologia",
-      "local": "Centro de Convenções",
-      "dataInicial": "2023-11-10",
-      "dataFinal": "2023-11-12",
-      "descricao": "Uma conferência sobre as últimas tendências em tecnologia.",
-      "imagem": "/luffygearfive.jpg",
-      "aberto": true,
-      "id": 1
-    },
-    {
-      "id": 3,
-      "titulo": "Festa de Aniversário da Empresa",
-      "local": "Salão de Festas",
-      "dataInicial": "2023-12-15T19:00:00",
-      "dataFinal": "2023-12-15T23:00:00",
-      "descricao": "Celebração do aniversário da empresa com comida e música.",
-      "aberto": true,
-      "imagem": "imagem3.jpg"
-    },
-    {
       "id": 4,
       "titulo": "Seminário de Marketing Digital",
       "local": "Auditório B",
@@ -129,6 +109,26 @@
       "imagem": "/luffygearfive.jpg",
       "aberto": true,
       "id": 14
+    },
+    {
+      "titulo": "Xipanzé",
+      "local": "IFRO Vilhena",
+      "dataInicial": "2023-10-19",
+      "dataFinal": "2023-10-20",
+      "descricao": "sadasfasdsafad",
+      "imagem": "/gearfive.jpeg",
+      "aberto": true,
+      "id": 15
+    },
+    {
+      "titulo": "Olá caminhoes",
+      "local": "IFRO",
+      "dataInicial": "2023-10-19",
+      "dataFinal": "2023-10-20",
+      "descricao": "ggg",
+      "imagem": "/gearfive.jpeg",
+      "aberto": true,
+      "id": 16
     }
   ]
 }

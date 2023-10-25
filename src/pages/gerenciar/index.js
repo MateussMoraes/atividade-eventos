@@ -35,7 +35,7 @@ export default function GerenciarEventos() {
 
   useEffect(() => {
     axios.get("http://localhost:3001/eventos").then(res => setEventos(res.data)).catch(error => console.log(error))
-  }, [deletarEvento])
+  }, [])
 
   async function deletarEvento() {
     axios.delete(`http://localhost:3001/eventos/${evento.id}`)
@@ -128,7 +128,6 @@ export default function GerenciarEventos() {
             ))}
           </Tbody>
         </Table>
-        {eventos.length == 0 && (<Text style={{ marginTop: "1rem" }}>Nenhum evento foi encontrado ❌ </Text>)}
       </div>
 
     </>

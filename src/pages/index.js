@@ -33,8 +33,6 @@ export default function Home() {
           />
         ))}
       </CardList>
-
-      {eventos.length == 0 && ( <Text style={{ marginLeft: "1rem"}}>Nenhum evento foi encontrado ❌</Text>)}
     </>
   )
 }
